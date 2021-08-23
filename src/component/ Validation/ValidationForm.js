@@ -10,6 +10,7 @@ export const maxLength30 = maxLength(30)
 const fileMinSize = 1 * 1000;//1KB
 const fileMaxSize = 20 * 1000 * 1000; // 2MB
 
+//created validate for input type = file
 export const validate = values => {
     let errors = null;
     if (!values || values.length === 0) {

@@ -2,7 +2,8 @@ import React from "react";
 import "./FormsControl.css"
 import {useSelector} from "react-redux";
 
-
+//created input for redux form 
+ 
 export const Input = ({input, meta: {touched, error, warning}, ...props}) => {
     return (
         <div>
@@ -18,7 +19,10 @@ export const Input = ({input, meta: {touched, error, warning}, ...props}) => {
         </div>
     );
 }
+
+//created input type = file  for redux form
 const adaptFileEventToValue = delegate => e => delegate(Object.values(e.target.files));
+
 export const InputFile = ({
                               input: {value: omitValue, onChange, onBlur, ...inputProps},
                               meta: {touched, error},

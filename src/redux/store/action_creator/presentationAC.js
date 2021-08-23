@@ -20,8 +20,12 @@ export const getPresentation = (currentPage) =>{
         }catch (error){
             if (error.response) {
                 dispatch(getPresentationErrorAC(error.response))
-
             }
+            if(error.response.status === 401) {
+                    localStorage.clear()
+                }
+
+
 
         }
     }
